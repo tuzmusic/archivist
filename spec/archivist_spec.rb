@@ -11,8 +11,10 @@ describe "Archivist" do
     Dir.foreach(dir) do |f|
       if f != file_name or f != '.' or f != '..' 
         if File.directory?(f) 
-          FileUtils.rm_rf(f)
-        else FileUtils.rm(f)
+          FileUtils.rm_rf(f, noop: true, verbose: true)
+        else 
+          FileUtils.rm(f, noop: true, verbose: true)
+        end
       end
     end
   }

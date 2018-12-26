@@ -1,5 +1,9 @@
 require "archivist/version"
 
 module Archivist
-  # Your code goes here...
+  class Archivist
+    def init
+      
+    end
+  end
 end
